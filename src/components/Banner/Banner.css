@@ -1,0 +1,18 @@
+.banner-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid 3px rgb(138, 20, 170);
+}
+
+.title {
+  color: black;
+  text-align: center;
+  padding: 32px;
+}
+
+.logo {
+  height: 45px;
+  width: 45px;
+}

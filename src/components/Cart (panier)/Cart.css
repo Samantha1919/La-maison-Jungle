@@ -1,0 +1,13 @@
+/* pk ca touche pas les bords*/
+
+.cart-container {
+  padding: 32px;
+  color: white;
+  background-color: #31b572;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 300px;
+
+  /* marche pas de tte facon margin: 0;*/
+}
