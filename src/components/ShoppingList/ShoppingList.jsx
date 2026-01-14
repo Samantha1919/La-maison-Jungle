@@ -1,5 +1,6 @@
 import { plantList } from "../../data/PlantList";
 import "./ShoppingList.css";
+import Plant from "../Plant/Plant";
 
 function ShoppingList() {
   const categories = plantList.reduce(
@@ -12,8 +13,8 @@ function ShoppingList() {
     <div className="sl-container">
       <ul className="ul-flex">
         {plantList.map((plant) => (
-          <li key={plant.id} className="plant-item">
-            {plant.name}
+          <li key={plant.id}>
+            <Plant />
           </li>
         ))}
       </ul>
