@@ -25,6 +25,7 @@ function CareScale({ scaleValue, careType }) {
         onClick={() =>
           alert(
             `Cette plante requiert ${quantity[scaleValue]} ${
+              // cmmt ca marche ?
               careType === "light" ? "de lumière" : "d'arrosage"
             }`,
           )
