@@ -2,9 +2,8 @@ import "./Plant.css";
 
 import CareScale from "../CareScale/CareScale";
 
-const Plant = ({ plant, careType, scaleValue }) => {
+const Plant = ({ plant }) => {
   // on recup plant en parametre depuis lautre page
-  console.log("plant", plant);
 
   return (
     <>
@@ -15,11 +14,13 @@ const Plant = ({ plant, careType, scaleValue }) => {
         <p>{plant.name}</p>
 
         <div>
+          {/* enft la
+          scaleValue c le nombre dcp qui etait dans PlantList et il vient de la
+          fin il est defini la et on le prend aussi en parametre*/}
           <CareScale careType="water" scaleValue={plant.water} />
           <CareScale careType="light" scaleValue={plant.light} />
         </div>
       </div>
-      {/*  <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} /> */}
     </>
   );
 };

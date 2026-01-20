@@ -1,4 +1,14 @@
 import monstera from "../assets/monstera.jpg";
+import ficus from "../assets/ficus.png";
+import pothos from "../assets/pothos.png";
+import yucca from "../assets/yucca.png";
+import olivier from "../assets/olivier.jpg";
+import geranium from "../assets/geranium.jpg";
+import basilique from "../assets/basilique.jpg";
+import aloe from "../assets/aloe.png";
+import succulente from "../assets/succulente.jpg";
+import palmier from "../assets/palmier.jpg";
+import menthe from "../assets/menthe.jpg";
 
 export const plantList = [
   {
@@ -15,7 +25,7 @@ export const plantList = [
     id: "2ab",
     water: 1,
     light: 3,
-    image: monstera,
+    image: ficus,
   },
   {
     name: "pothos argenté",
@@ -23,7 +33,7 @@ export const plantList = [
     id: "3sd",
     water: 2,
     light: 1,
-    image: monstera,
+    image: pothos,
   },
   {
     name: "yucca",
@@ -31,7 +41,7 @@ export const plantList = [
     id: "4kk",
     water: 2,
     light: 2,
-    image: monstera,
+    image: yucca,
   },
   {
     name: "olivier",
@@ -39,7 +49,7 @@ export const plantList = [
     id: "5pl",
     water: 1,
     light: 3,
-    image: monstera,
+    image: olivier,
   },
   {
     name: "géranium",
@@ -47,7 +57,7 @@ export const plantList = [
     id: "6uo",
     water: 2,
     light: 2,
-    image: monstera,
+    image: geranium,
   },
   {
     name: "basilique",
@@ -55,7 +65,7 @@ export const plantList = [
     id: "7ie",
     water: 3,
     light: 2,
-    image: monstera,
+    image: basilique,
   },
   {
     name: "aloe",
@@ -63,7 +73,7 @@ export const plantList = [
     id: "8fp",
     water: 1,
     light: 2,
-    image: monstera,
+    image: aloe,
   },
   {
     name: "succulente",
@@ -71,7 +81,7 @@ export const plantList = [
     id: "9vn",
     water: 1,
     light: 2,
-    image: monstera,
+    image: succulente,
   },
 
   {
@@ -80,7 +90,7 @@ export const plantList = [
     id: "10kl",
     water: 1,
     light: 3,
-    image: monstera,
+    image: palmier,
   },
   {
     name: "menthe",
@@ -88,6 +98,6 @@ export const plantList = [
     id: "11an",
     water: 2,
     light: 2,
-    image: monstera,
+    image: menthe,
   },
 ];
