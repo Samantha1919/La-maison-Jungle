@@ -1,9 +1,16 @@
 import "./Cart.css";
 import { useState } from "react";
 
-const Cart = () => {
-  const monsteraPrice = 8;
-  const [cart, updateCart] = useState(0); // valeur initiale de 0
+const Cart = ({ cart, updateCart }) => {
+  // const total = cart.reduce(
+  //   (acc, plantType) => acc + plantType.amount * plantType.price,
+  //   0,
+  // );
+
+  const totalPrice = cart.reduce((total, plant) => total + plant.price, 0);
+
+  console.log("cart in cart", cart);
+
   const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
@@ -12,17 +19,18 @@ const Cart = () => {
         Fermer
       </button>
       <h2>Panier</h2>
-      <div>Monstera : {monsteraPrice}CHF</div>
-      <button className="boutons" onClick={() => updateCart(cart + 1)}>
-        Ajouter
-      </button>
-      {/* ducoup au debut tu as 0 carte et apres ducoup ca fait 0 + 1 = 1 et apres 1 + 1 = 2 ect */}
-      <h3>Total : {monsteraPrice * cart}CHF</h3>
-      {/*on fait ducoup 8x1 8x2 ect*/}
+
+      {cart.map((item) => (
+        <p>
+          {item.name},{item.price}
+        </p>
+      ))}
+
+      <h3>Total : {totalPrice}CHF</h3>
+
       <button className="boutons" onClick={() => updateCart(0)}>
         Vider le panier
       </button>
-      {/* la "fonction" remet la valeur de cart a 0 et dcp ca vide le panier */}
     </div>
   ) : (
     <div>

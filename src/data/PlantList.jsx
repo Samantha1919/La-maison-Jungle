@@ -18,6 +18,7 @@ export const plantList = [
     water: 3,
     light: 2,
     image: monstera,
+    price: 8,
   },
   {
     name: "ficus lyrata",
@@ -26,6 +27,7 @@ export const plantList = [
     water: 1,
     light: 3,
     image: ficus,
+    price: 13,
   },
   {
     name: "pothos argenté",
@@ -34,6 +36,7 @@ export const plantList = [
     water: 2,
     light: 1,
     image: pothos,
+    price: 14,
   },
   {
     name: "yucca",
@@ -42,6 +45,7 @@ export const plantList = [
     water: 2,
     light: 2,
     image: yucca,
+    price: 19,
   },
   {
     name: "olivier",
@@ -50,6 +54,7 @@ export const plantList = [
     water: 1,
     light: 3,
     image: olivier,
+    price: 20,
   },
   {
     name: "géranium",
@@ -58,6 +63,7 @@ export const plantList = [
     water: 2,
     light: 2,
     image: geranium,
+    price: 12,
   },
   {
     name: "basilique",
@@ -66,6 +72,7 @@ export const plantList = [
     water: 3,
     light: 2,
     image: basilique,
+    price: 11,
   },
   {
     name: "aloe",
@@ -74,6 +81,7 @@ export const plantList = [
     water: 1,
     light: 2,
     image: aloe,
+    price: 18,
   },
   {
     name: "succulente",
@@ -82,6 +90,7 @@ export const plantList = [
     water: 1,
     light: 2,
     image: succulente,
+    price: 13,
   },
 
   {
@@ -91,6 +100,7 @@ export const plantList = [
     water: 1,
     light: 3,
     image: palmier,
+    price: 20,
   },
   {
     name: "menthe",
@@ -99,5 +109,6 @@ export const plantList = [
     water: 2,
     light: 2,
     image: menthe,
+    price: 7,
   },
 ];

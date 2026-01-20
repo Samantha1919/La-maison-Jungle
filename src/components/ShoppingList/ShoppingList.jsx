@@ -2,11 +2,13 @@ import { plantList } from "../../data/PlantList";
 import "./ShoppingList.css";
 import Plant from "../Plant/Plant";
 
-function ShoppingList() {
+// permet dafficher la liste de plantes
+
+function ShoppingList({ cart, updateCart }) {
   const categories = plantList.reduce(
     (acc, plant) =>
       acc.includes(plant.category) ? acc : acc.concat(plant.category), // pr pas faire de doublons genre pr que y ait que 3 categories et si genre 2 plantes ont la mm categorie ca reconnaisse que c la meme
-    []
+    [],
   );
 
   return (
@@ -17,10 +19,16 @@ function ShoppingList() {
           (plant) => (
             <li key={plant.id}>
               <Plant plant={plant} />
+              <button onClick={() => updateCart([...cart, plant])}>
+                {/* rajoute la plante dans la variable cart*/}
+                Ajouter
+              </button>
+              {/* ducoup si tu mets ca cart aura la valeur de plant*/}
+              {/*?? faut creer genre une nvl liste  */}
               {/*  on prend lobjet mis en parametre
               avant et on le met dans les {}*/}
             </li>
-          )
+          ),
         )}
       </ul>
       {/*tu peux mettre nimporte quel nom entre () c juste que la on a mis plant et categorie pr la logique */}

@@ -3,6 +3,7 @@ import "./Plant.css";
 import CareScale from "../CareScale/CareScale";
 
 const Plant = ({ plant }) => {
+  // affiche une seule plante
   // on recup plant en parametre depuis lautre page
 
   return (
