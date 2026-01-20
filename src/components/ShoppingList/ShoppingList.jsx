@@ -23,8 +23,7 @@ function ShoppingList({ cart, updateCart }) {
                 {/* rajoute la plante dans la variable cart*/}
                 Ajouter
               </button>
-              {/* ducoup si tu mets ca cart aura la valeur de plant*/}
-              {/*?? faut creer genre une nvl liste  */}
+
               {/*  on prend lobjet mis en parametre
               avant et on le met dans les {}*/}
             </li>

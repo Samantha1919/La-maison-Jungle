@@ -11,7 +11,7 @@ const quantity = {
 function CareScale({ scaleValue, careType }) {
   const range = [1, 2, 3];
 
-  const scaleType = // sert a savoir si c de la lumiiere ou de leau ps : on peut creer une variable js avec une balise html dedans mais jle savais pas dcp dmd dm
+  const scaleType = // sert a savoir si c de la lumiere ou de leau ps : on peut creer une variable js avec une balise html dedans mais jle savais pas dcp dmd dm
     careType === "light" ? (
       <img src={Sun} alt="sun-icon" />
     ) : (

@@ -7,7 +7,7 @@ const Footer = () => {
   function handleInput(e) {
     // enft c un event et il contient plein de choses dans le et ce qui tinteresse c le target puis la value qui est dans linput
     console.log("e", e);
-    setInputValue(e.target.value); // je comprends pas trop a quoi ca sert. genre c quand ca change ducoup ca entre dans linput value et apr on verifier si y a un @
+    setInputValue(e.target.value); //  genre c quand ca change ducoup ca entre dans linput value et apr on verifier si y a un @
   }
 
   function handleBlur() {
@@ -26,7 +26,7 @@ const Footer = () => {
           name="email"
           placeholder="Entrez votre email"
           onChange={handleInput}
-          value={inputValue} // comprends pas
+          value={inputValue}
           onBlur={handleBlur}
         />
       </div>
