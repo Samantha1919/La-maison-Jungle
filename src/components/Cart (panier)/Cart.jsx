@@ -1,55 +1,49 @@
-import './Cart.css';
-import { useState } from 'react';
+import "./Cart.css";
+import { useState } from "react";
 
 const Cart = ({ cart, updateCart }) => {
-	// const total = cart.reduce(
-	//   (acc, plantType) => acc + plantType.amount * plantType.price,
-	//   0,
-	// );
+  // const total = cart.reduce(
+  //   (acc, plantType) => acc + plantType.amount * plantType.price,
+  //   0,
+  // );
 
-	const totalPrice = cart.reduce(
-		(total, plant) => total + plant.price * plant.quantity,
-		0,
-	);
+  const totalPrice = cart.reduce(
+    (total, plant) => total + plant.price * plant.quantity,
+    0,
+  );
 
-	console.log('cart in cart', cart);
+  console.log("cart in cart", cart);
 
-	const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-	return isOpen ? (
-		<div className="cart-container">
-			<button
-				className="boutons"
-				onClick={() => setIsOpen(false)}>
-				Fermer
-			</button>
-			<h2>Panier</h2>
+  return isOpen ? (
+    <div className="cart-container">
+      <button className="boutons" onClick={() => setIsOpen(false)}>
+        Fermer
+      </button>
+      <h2>Panier</h2>
 
-			{cart.map((item, index) => (
-				<p key={index}>
-					{item.name} x{item.quantity || 1} -{' '}
-					{item.price * (item.quantity || 1)} CHF
-				</p>
-			))}
+      {cart.map((item, index) => (
+        <p key={index}>
+          {item.quantity || 1} {item.name} -{item.price * (item.quantity || 1)}
+          CHF
+        </p>
+      ))}
 
-			<h3>Total : {totalPrice}CHF</h3>
+      <h3>Total : {totalPrice}CHF</h3>
 
-			<button
-				className="boutons"
-				onClick={() => updateCart(0)}>
-				Vider le panier
-			</button>
-		</div>
-	) : (
-		<div>
-			<button
-				className="open-button"
-				onClick={() => setIsOpen(true)}>
-				{/* quand tu appuies sur le bouton ca change la valeu de isOpen a true ducoup ca ouvre le panier*/}
-				Ouvrir le Panier
-			</button>
-		</div>
-	);
+      <button className="boutons" onClick={() => updateCart([])}>
+        Vider le panier
+      </button>
+    </div>
+  ) : (
+    <div>
+      <button className="open-button" onClick={() => setIsOpen(true)}>
+        {/* quand tu appuies sur le bouton ca change la valeu de isOpen a true ducoup ca ouvre le panier*/}
+        Ouvrir le Panier
+      </button>
+    </div>
+  );
 };
 
 export default Cart;

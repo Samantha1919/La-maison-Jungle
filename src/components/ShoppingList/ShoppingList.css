@@ -2,6 +2,7 @@
   padding: 32px;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .ul-flex {
