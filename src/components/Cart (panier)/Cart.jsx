@@ -1,20 +1,17 @@
 import "./Cart.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Cart = ({ cart, updateCart }) => {
-  // const total = cart.reduce(
-  //   (acc, plantType) => acc + plantType.amount * plantType.price,
-  //   0,
-  // );
+  const [isOpen, setIsOpen] = useState(false);
 
   const totalPrice = cart.reduce(
     (total, plant) => total + plant.price * plant.quantity,
     0,
   );
 
-  console.log("cart in cart", cart);
-
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    document.title = `LMJ: ${totalPrice}CHF d'achats`;
+  }, [totalPrice]);
 
   return isOpen ? (
     <div className="cart-container">
